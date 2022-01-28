@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 16:57:10 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/29 00:37:55 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/29 00:42:09 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ Fixed &Fixed::operator=(Fixed const &src)
 {
 	std::cout << "Assignation operator called" << std::endl;
 	this->raw = src.getRawBits();
+	return *this;
 }
 
 int Fixed::getRawBits() const
