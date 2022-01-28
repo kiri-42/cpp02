@@ -6,11 +6,12 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 16:56:29 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/28 17:11:38 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/29 00:40:43 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include "Fixed.hpp"
 
 int	main()
 {
