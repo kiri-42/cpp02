@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 16:57:19 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/28 23:17:00 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/29 00:35:04 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class Fixed
 {
 	private:
-		int fixed_point;
+		int raw;
 		static const int bit = 8;
 
 	public:
