@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 16:57:10 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/29 00:06:50 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/29 00:13:09 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,8 @@ Fixed::~Fixed()
 	std::cout << "Destructor called" << std::endl;
 }
 
-
+Fixed &Fixed::operator=(Fixed const &src)
+{
+	std::cout << "Assignment operator called" << std::endl;
+	this->fixed_point = src.getRawBits();
+}
