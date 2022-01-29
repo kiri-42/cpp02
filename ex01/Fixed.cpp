@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 16:57:10 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/29 17:07:43 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/29 17:17:22 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,4 +64,9 @@ void Fixed::setRawBits(int const raw)
 float Fixed::toFloat(void) const
 {
 	return static_cast<float>(this->raw) / (1 << this->bit);
+}
+
+int Fixed::toInt(void) const
+{
+	return this->raw / (1 << this->bit);
 }
