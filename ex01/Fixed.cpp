@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 16:57:10 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/29 00:42:09 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/29 16:58:51 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,18 @@ Fixed::Fixed()
 {
 	std::cout << "Default constructor called" << std::endl;
 	this->raw = 0;
+}
+
+Fixed::Fixed(int const src)
+{
+	std::cout << "Int constructor called" << std::endl;
+	this->raw = src * (1 << this->bit);
+}
+
+Fixed::Fixed(float const src)
+{
+	std::cout << "Float constructor called" << std::endl;
+	this->raw = static_cast<int>(std::roundf(src * (1 << this->bit)));
 }
 
 Fixed::Fixed(Fixed const &src)
