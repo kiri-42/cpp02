@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 16:56:29 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/29 00:40:43 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/05/26 00:45:26 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,10 @@ int	main()
 	std::cout << a.getRawBits() << std::endl;
 	std::cout << b.getRawBits() << std::endl;
 	std::cout << c.getRawBits() << std::endl;
+
+	a.setRawBits(10);
+
+	std::cout << a.getRawBits() << std::endl;
 
 	return 0;
 }
