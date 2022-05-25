@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 16:57:10 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/05/26 05:51:25 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/05/26 06:15:03 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,6 +156,42 @@ Fixed Fixed::operator--(int) {
 	Fixed ret(*this);
 	this->raw--;
 	return ret;
+}
+
+Fixed& Fixed::min(Fixed &f1, Fixed &f2)
+{
+	if (f1.raw <= f2.raw) {
+		return f1;
+	} else {
+		return f2;
+	}
+}
+
+const Fixed& Fixed::min(const Fixed &f1, const Fixed &f2)
+{
+	if (f1.raw <= f2.raw) {
+		return f1;
+	} else {
+		return f2;
+	}
+}
+
+Fixed& Fixed::max(Fixed &f1, Fixed &f2)
+{
+	if (f1.raw >= f2.raw) {
+		return f1;
+	} else {
+		return f2;
+	}
+}
+
+const Fixed& Fixed::max(const Fixed &f1, const Fixed &f2)
+{
+	if (f1.raw >= f2.raw) {
+		return f1;
+	} else {
+		return f2;
+	}
 }
 
 std::ostream &operator<<(std::ostream &ost, Fixed const &src)
