@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 16:57:19 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/05/26 04:16:31 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/05/26 05:26:50 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,30 @@ class Fixed
 		Fixed(float const src);
 		Fixed(Fixed const &src);
 		~Fixed();
-		Fixed &operator=(Fixed const &src);
 
 		int getRawBits(void) const;
 		void setRawBits(int const raw);
 		float toFloat(void) const;
 		int toInt(void) const;
+
+		Fixed &operator=(Fixed const &src);
+
+		bool operator==(Fixed const &src) const;
+		bool operator!=(Fixed const &src) const;
+		bool operator>(Fixed const &src) const;
+		bool operator>=(Fixed const &src) const;
+		bool operator<(Fixed const &src) const;
+		bool operator<=(Fixed const &src) const;
+
+		Fixed operator+(Fixed const &src) const;
+		Fixed operator-(Fixed const &src) const;
+		Fixed operator*(Fixed const &src) const;
+		Fixed operator/(Fixed const &src) const;
+
+		Fixed& operator++();
+		Fixed operator++(int);
+		Fixed& operator--();
+		Fixed operator--(int);
 };
 
 std::ostream &operator<<(std::ostream &ost, Fixed const &src);
