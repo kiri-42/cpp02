@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 16:57:10 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/05/26 04:16:56 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/05/26 04:22:17 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,6 @@ int Fixed::toInt(void) const
 
 std::ostream &operator<<(std::ostream &ost, Fixed const &src)
 {
-	// ost << std::to_string(src.toFloat());
 	ost << src.toFloat();
 	return ost;
 }
