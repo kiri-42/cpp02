@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 16:57:19 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/29 16:49:24 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/05/26 04:16:31 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,7 @@ class Fixed
 		float toFloat(void) const;
 		int toInt(void) const;
 };
+
+std::ostream &operator<<(std::ostream &ost, Fixed const &src);
 
 #endif
